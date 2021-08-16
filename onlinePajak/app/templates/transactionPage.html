@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<br>
+
+<div class="container">
+
+<div class="col-md-6 mx-auto text-center">
+	 <div class="header-title">
+
+		<h3 class="wv-heading--subtitle">
+		   Transaction with one another.
+		</h3>
+	 </div>
+  </div><br>
+
+
+  <div class="row">
+	 <div class="col-md-4 mx-auto">
+		<div class="card" style="width: 21rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Company Name = {{company}}</li>
+    <li class="list-group-item">Vendor = {{vendor}}</li>
+    <li class="list-group-item">Total Transaction = {{total}}</li>
+  </ul>
+</div>
+         {% for datas in data%}
+         <h6>{{datas.company_name}}</h6>
+         {% endfor %}
+
+	 </div>
+  </div>
+</div>
+
+{% endblock %}
